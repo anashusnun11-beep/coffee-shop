@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ember &amp; Bean — Neighborhood Coffee Roasters</title>
+  <meta name="description" content="Ember & Bean is a neighborhood coffee shop and small-batch roaster. Seasonal espresso, slow pour-overs, and fresh pastries baked every morning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="logo" aria-label="Ember & Bean home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="16" rx="10" ry="14" transform="rotate(30 16 16)"/><path d="M11 6c6 5 4 15 10 20" fill="none" stroke="var(--cream)" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>Ember &amp; Bean</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-links" class="nav-links">
+        <a href="#menu">Menu</a>
+        <a href="#story">Our Story</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
+        <a href="#visit" class="btn btn-small">Order Ahead</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Small-batch roasters · Est. 2014</p>
+          <h1>Coffee worth slowing down for.</h1>
+          <p class="lead">We roast in small batches every Tuesday and pour every cup by hand. Pull up a chair, stay a while — the refills are on us before 9am.</p>
+          <div class="hero-actions">
+            <a href="#menu" class="btn">See the Menu</a>
+            <a href="#visit" class="btn btn-ghost">Find Us</a>
+          </div>
+          <ul class="hero-stats">
+            <li><strong>12</strong><span>single origins</span></li>
+            <li><strong>48h</strong><span>roast-to-cup</span></li>
+            <li><strong>4.9★</strong><span>1,200+ reviews</span></li>
+          </ul>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 400 400">
+            <circle cx="200" cy="200" r="180" fill="var(--latte)"/>
+            <g class="steam" fill="none" stroke="var(--espresso)" stroke-width="6" stroke-linecap="round" opacity=".35">
+              <path d="M165 120c-15-20 15-30 0-55"/>
+              <path d="M200 115c-15-20 15-30 0-55"/>
+              <path d="M235 120c-15-20 15-30 0-55"/>
+            </g>
+            <ellipse cx="200" cy="315" rx="130" ry="20" fill="var(--espresso)" opacity=".15"/>
+            <path d="M95 150h210l-18 140a40 40 0 0 1-40 35h-94a40 40 0 0 1-40-35z" fill="var(--cream)" stroke="var(--espresso)" stroke-width="6"/>
+            <path d="M300 175h20a30 30 0 0 1 0 60h-26" fill="none" stroke="var(--espresso)" stroke-width="12" stroke-linecap="round"/>
+            <ellipse cx="200" cy="150" rx="105" ry="16" fill="var(--roast)" stroke="var(--espresso)" stroke-width="6"/>
+            <path d="M200 140c-14 0-22 8-14 14 6 4 14 4 14 4s8 0 14-4c8-6 0-14-14-14z" fill="var(--latte)"/>
+            <rect x="140" y="215" width="120" height="34" rx="17" fill="var(--ember)"/>
+            <text x="200" y="238" text-anchor="middle" font-family="Fraunces, serif" font-weight="700" font-size="17" fill="var(--cream)">EMBER</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+      <div class="container feature-grid">
+        <article class="feature">
+          <div class="icon" aria-hidden="true">☕</div>
+          <h3>Roasted in-house</h3>
+          <p>Every bean is roasted on our 5kg Probat, right behind the counter.</p>
+        </article>
+        <article class="feature">
+          <div class="icon" aria-hidden="true">🌱</div>
+          <h3>Direct trade</h3>
+          <p>We buy straight from eight farms we visit — and pay well above fair-trade.</p>
+        </article>
+        <article class="feature">
+          <div class="icon" aria-hidden="true">🥐</div>
+          <h3>Baked at dawn</h3>
+          <p>Croissants, cardamom buns and sourdough, out of the oven by 6:30am.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="menu">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">The Menu</p>
+          <h2>Simple drinks, done properly.</h2>
+        </header>
+
+        <div class="tabs" role="tablist" aria-label="Menu categories">
+          <button role="tab" aria-selected="true" aria-controls="tab-espresso" id="t-espresso">Espresso</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-brew" id="t-brew" tabindex="-1">Slow Bar</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-bakery" id="t-bakery" tabindex="-1">Bakery</button>
+        </div>
+
+        <div id="tab-espresso" role="tabpanel" aria-labelledby="t-espresso" class="menu-list">
+          <div class="item"><div><h4>Espresso</h4><p>House blend, chocolate &amp; cherry notes</p></div><span class="price">$3.25</span></div>
+          <div class="item"><div><h4>Cortado</h4><p>Equal parts espresso and steamed milk</p></div><span class="price">$4.00</span></div>
+          <div class="item"><div><h4>Flat White</h4><p>Double ristretto, silky microfoam</p></div><span class="price">$4.50</span></div>
+          <div class="item"><div><h4>Ember Latte <em class="tag">Signature</em></h4><p>Smoked maple, cinnamon, oat milk</p></div><span class="price">$5.75</span></div>
+          <div class="item"><div><h4>Mocha</h4><p>70% dark chocolate ganache, whole milk</p></div><span class="price">$5.25</span></div>
+          <div class="item"><div><h4>Iced Shaken Espresso</h4><p>Brown sugar, a pinch of sea salt</p></div><span class="price">$5.00</span></div>
+        </div>
+
+        <div id="tab-brew" role="tabpanel" aria-labelledby="t-brew" class="menu-list" hidden>
+          <div class="item"><div><h4>Pour Over</h4><p>Rotating single origin, ask what's on</p></div><span class="price">$5.50</span></div>
+          <div class="item"><div><h4>Ethiopia Guji <em class="tag">New</em></h4><p>Jasmine, bergamot, peach</p></div><span class="price">$6.50</span></div>
+          <div class="item"><div><h4>Colombia Huila</h4><p>Red apple, caramel, cocoa nib</p></div><span class="price">$6.00</span></div>
+          <div class="item"><div><h4>Cold Brew</h4><p>Steeped 18 hours, served over one big cube</p></div><span class="price">$4.75</span></div>
+          <div class="item"><div><h4>French Press for Two</h4><p>Any origin, with a little cookie each</p></div><span class="price">$9.00</span></div>
+          <div class="item"><div><h4>Chai</h4><p>Brewed in-house with whole spices</p></div><span class="price">$4.75</span></div>
+        </div>
+
+        <div id="tab-bakery" role="tabpanel" aria-labelledby="t-bakery" class="menu-list" hidden>
+          <div class="item"><div><h4>Butter Croissant</h4><p>72-hour laminated dough</p></div><span class="price">$3.75</span></div>
+          <div class="item"><div><h4>Cardamom Bun <em class="tag">Favorite</em></h4><p>Swedish-style, pearl sugar</p></div><span class="price">$4.25</span></div>
+          <div class="item"><div><h4>Avocado Toast</h4><p>Sourdough, chili crisp, lemon</p></div><span class="price">$9.50</span></div>
+          <div class="item"><div><h4>Banana Bread</h4><p>Toasted, with salted brown butter</p></div><span class="price">$4.00</span></div>
+          <div class="item"><div><h4>Breakfast Sandwich</h4><p>Egg, cheddar, chive on a brioche bun</p></div><span class="price">$8.75</span></div>
+          <div class="item"><div><h4>Almond Financier</h4><p>Gluten-free, brown butter &amp; almond</p></div><span class="price">$3.50</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section id="story" class="story">
+      <div class="container story-grid">
+        <div class="story-art" aria-hidden="true">
+          <div class="bean-pattern"></div>
+          <blockquote>"We just wanted the kind of café we'd want to spend a Sunday in."</blockquote>
+        </div>
+        <div>
+          <p class="eyebrow">Our Story</p>
+          <h2>From a garage roaster to your corner café.</h2>
+          <p>Ember &amp; Bean started in 2014 with a secondhand roaster in Maya and Leo's garage and a farmers' market stall that sold out by 10am. A decade later we're still roasting a few kilos at a time, still learning, and still obsessed with getting each cup just right.</p>
+          <p>Our café is a place for laptops and long chats, first dates and neighbors catching up. The wifi is fast, the playlist is good, and there's always a seat by the window if you wait a minute.</p>
+          <a href="#visit" class="btn btn-ghost">Come say hi</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="reviews">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Kind Words</p>
+          <h2>What the regulars say.</h2>
+        </header>
+        <div class="review-grid">
+          <figure class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>"The best flat white in the city, and the baristas remember my name. My favorite part of every morning."</blockquote>
+            <figcaption>— Priya S.</figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>"Came for the coffee, stayed for the cardamom buns. I've worked from that window seat for two years."</blockquote>
+            <figcaption>— Daniel R.</figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>"They walked me through three pour-overs side by side. Didn't know coffee could taste like peaches."</blockquote>
+            <figcaption>— Sam K.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section id="visit" class="visit">
+      <div class="container visit-grid">
+        <div>
+          <p class="eyebrow">Visit Us</p>
+          <h2>Pull up a chair.</h2>
+          <address>
+            214 Maple Street<br>
+            Riverside District<br>
+            <a href="tel:+15550142233">(555) 014-2233</a>
+          </address>
+          <table class="hours">
+            <caption class="sr-only">Opening hours</caption>
+            <tr><th scope="row">Mon – Fri</th><td>6:30am – 6:00pm</td></tr>
+            <tr><th scope="row">Saturday</th><td>7:30am – 6:00pm</td></tr>
+            <tr><th scope="row">Sunday</th><td>8:00am – 4:00pm</td></tr>
+          </table>
+          <p class="open-status" id="open-status" aria-live="polite"></p>
+        </div>
+        <form class="signup" id="signup">
+          <h3>Get a free drink on us.</h3>
+          <p>Join our newsletter for new roasts, events, and a coupon for your first drink.</p>
+          <label for="email" class="sr-only">Email address</label>
+          <div class="signup-row">
+            <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+            <button type="submit" class="btn">Sign Up</button>
+          </div>
+          <p class="form-msg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>© <span id="year"></span> Ember &amp; Bean Coffee Roasters</p>
+      <nav aria-label="Social">
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">Email</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
